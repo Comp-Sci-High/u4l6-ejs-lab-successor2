@@ -20,7 +20,7 @@
 
     <div>
         <!-- Use the name attribute to set the h2 -->
-        <h2 class="center"><%= category %></h2>
+        <h2 class="center"><%= name %></h2>
         <!-- Use the imageUrl attribute to fix the image -->
         <img src="<%= imageUrl %>" class="main-image">
         <div class="color-options">
@@ -33,17 +33,15 @@
         <p class="center">$<%= cost %></p>
 
         <!-- Use conditions to show the first button if the quantity is over 0. Otherwise, show the Sold Out button. -->
-        <% if (items.[i].quantity > 0) { %>
-           <% <button class="buy-now-button center">Buy Now</button> %>
+        <% if (quantity > 0) { %>
+            <button class="buy-now-button center">Buy Now</button> 
             <% } else { %>
-              <%  <button class="buy-now-button" disabled>Sold Out</button> %>
+               <button class="buy-now-button" disabled>Sold Out</button> 
             <% } %>
           </header>
            <!-- Extra credit: Add JS such that when the Buy Now button is clicked, you add HTML underneath it that says "Added to cart" (review DOM manipulation!) -->
 
-          <button class="buy-now-button center">Buy Now</button>
-        
-          <button class="buy-now-button" disabled>Sold Out</button>
+
       
   
     </div>
