@@ -30,10 +30,15 @@
 
         </div>
         <!-- Use the cost attribute to set the p tag -->
-        <p class="center">$...</p>
+        <p class="center">$<%= cost %></p>
 
         <!-- Use conditions to show the first button if the quantity is over 0. Otherwise, show the Sold Out button. -->
-
+        <% if (items.[i].quantity > 0) { %>
+           <% <button class="buy-now-button center">Buy Now</button> %>
+            <% } else { %>
+              <%  <button class="buy-now-button" disabled>Sold Out</button> %>
+            <% } %>
+          </header>
            <!-- Extra credit: Add JS such that when the Buy Now button is clicked, you add HTML underneath it that says "Added to cart" (review DOM manipulation!) -->
 
           <button class="buy-now-button center">Buy Now</button>

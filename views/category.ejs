@@ -24,14 +24,14 @@
     <div class="section">
       <!-- Modify the following to make one item card for each element of the items array -->
       <!-- You should use the values from data to dynamically populate the image, item name, cost, and path -->
-     <% for (i = 0; i) {
-      <div class="item-card">
-        <img src="<%= imageUrl %>" />
-        <h3><%= name %></h3>
-        <p>$<%= cost %></p>
-        <a href="<%= path %>">More info</a>
+     <% for (i = 0; i < items.length; i++) { %>
+      <div class="item-card"> 
+        <img src="<%= items[i].imageUrl %>" />
+        <h3><%= items[i].name %></h3>
+        <p>$<%= items[i].cost %></p>
+        <a href="<%= items[i].path %>">More info</a>
       </div>
-    }
+   <% } %>
     </div>
   </body>
 </html>
